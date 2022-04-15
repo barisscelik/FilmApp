@@ -8,4 +8,5 @@ target 'FilmApp' do
   # Pods for FilmApp
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
+  pod 'Firebase/RemoteConfig'
 end
