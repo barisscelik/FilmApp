@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseRemoteConfig
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     let label: UILabel = {
         let label = UILabel()
@@ -25,16 +25,30 @@ class ViewController: UIViewController {
         view.backgroundColor = .systemYellow
         view.addSubview(label)
         fetchText()
+        checkInternetConnection()
         
-        
-        // Checking Internet Connetion
+     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        label.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+        label.center = view.center
+    }
+    
+    private func checkInternetConnection() {
         NetworkChecker.shared.getConnetctionStatus { [weak self] isConnected in
-            DispatchQueue.main.sync {
-                self?.view.backgroundColor = isConnected ? .systemCyan : .systemPink
+            DispatchQueue.main.async {
+                if !isConnected {
+                    let alert = UIAlertController(title: "Internet Status",
+                                                  message: "There is no internet!!",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self?.present(alert, animated: true, completion: nil)
+                }
             }
             
         }
-     }
+    }
     
     private func fetchText() {
         let settings = RemoteConfigSettings()
@@ -46,7 +60,8 @@ class ViewController: UIViewController {
                 self?.remoteConfig.activate(completion: { _, error in
                     if error == nil {
                         DispatchQueue.main.sync {
-                             self?.label.text = self?.remoteConfig.configValue(forKey: "text_view").stringValue
+                            self?.label.text = self?.remoteConfig.configValue(forKey: "text_view").stringValue
+                            self?.fireTimer()
                         }
                     }
                 })
@@ -56,10 +71,11 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        label.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
-        label.center = view.center
+    private func fireTimer() {
+        Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false) { timer in
+            timer.invalidate()
+            // MARK: - Present here
+        }
     }
 
 }
