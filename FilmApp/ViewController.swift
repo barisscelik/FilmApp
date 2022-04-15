@@ -11,8 +11,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+        view.backgroundColor = .systemYellow
+        
+        // Checking Internet Connetion
+        
+        NetworkChecker.shared.getConnetctionStatus { [weak self] isConnected in
+            DispatchQueue.main.sync {
+                self?.view.backgroundColor = isConnected ? .systemCyan : .systemPink
+            }
+            
+        }
+     }
+    
 
 
 }

@@ -15,6 +15,7 @@
 		74D856E12809C89900FEE1B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74D856E02809C89900FEE1B4 /* Assets.xcassets */; };
 		74D856E42809C89900FEE1B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D856E22809C89900FEE1B4 /* LaunchScreen.storyboard */; };
 		74D856EC2809CDD700FEE1B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74D856EB2809CDD700FEE1B4 /* GoogleService-Info.plist */; };
+		74D856EE2809EA0800FEE1B4 /* NetworkChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D856ED2809EA0800FEE1B4 /* NetworkChecker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		74D856E32809C89900FEE1B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74D856E52809C89900FEE1B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74D856EB2809CDD700FEE1B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		74D856ED2809EA0800FEE1B4 /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
 		7C653D775240BCFDF2B6062C /* Pods_FilmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B04CAFF9C284A482C45F2ED /* Pods-FilmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmApp.debug.xcconfig"; path = "Target Support Files/Pods-FilmApp/Pods-FilmApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,7 +52,6 @@
 				8B04CAFF9C284A482C45F2ED /* Pods-FilmApp.debug.xcconfig */,
 				355C187B51DD17CDE2A48647 /* Pods-FilmApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,6 +79,7 @@
 				74D856D72809C89600FEE1B4 /* AppDelegate.swift */,
 				74D856D92809C89600FEE1B4 /* SceneDelegate.swift */,
 				74D856DB2809C89600FEE1B4 /* ViewController.swift */,
+				74D856ED2809EA0800FEE1B4 /* NetworkChecker.swift */,
 				74D856DD2809C89600FEE1B4 /* Main.storyboard */,
 				74D856E02809C89900FEE1B4 /* Assets.xcassets */,
 				74D856E22809C89900FEE1B4 /* LaunchScreen.storyboard */,
@@ -213,6 +215,7 @@
 			files = (
 				74D856DC2809C89600FEE1B4 /* ViewController.swift in Sources */,
 				74D856D82809C89600FEE1B4 /* AppDelegate.swift in Sources */,
+				74D856EE2809EA0800FEE1B4 /* NetworkChecker.swift in Sources */,
 				74D856DA2809C89600FEE1B4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
