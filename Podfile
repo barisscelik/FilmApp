@@ -9,4 +9,7 @@ target 'FilmApp' do
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
   pod 'Firebase/RemoteConfig'
+  
+  #Loading Animation
+  pod 'PKLoader'
 end

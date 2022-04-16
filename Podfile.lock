@@ -97,12 +97,14 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - PKLoader (0.1.2)
   - PromisesObjC (2.1.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Core
   - Firebase/RemoteConfig
+  - PKLoader
 
 SPEC REPOS:
   trunk:
@@ -117,6 +119,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleUtilities
     - nanopb
+    - PKLoader
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -131,8 +134,9 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  PKLoader: 2d12343e6f3bdeedb2bc9d94af069c445f14981e
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
 
-PODFILE CHECKSUM: 2b3633fb8aaffa559b7f99cd5b62d829e8e59762
+PODFILE CHECKSUM: 12afac27ba4926f2f2062c08567d086fb765d960
 
 COCOAPODS: 1.11.2
