@@ -32,6 +32,7 @@
 		74D856EB2809CDD700FEE1B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74D856ED2809EA0800FEE1B4 /* NetworkChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkChecker.swift; sourceTree = "<group>"; };
 		74D856EF280AEF2800FEE1B4 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
+		74D856F1280AFB8000FEE1B4 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		7C653D775240BCFDF2B6062C /* Pods_FilmApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B04CAFF9C284A482C45F2ED /* Pods-FilmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmApp.debug.xcconfig"; path = "Target Support Files/Pods-FilmApp/Pods-FilmApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +79,7 @@
 		74D856D62809C89600FEE1B4 /* FilmApp */ = {
 			isa = PBXGroup;
 			children = (
+				74D856F1280AFB8000FEE1B4 /* Secrets.xcconfig */,
 				74D856D72809C89600FEE1B4 /* AppDelegate.swift */,
 				74D856D92809C89600FEE1B4 /* SceneDelegate.swift */,
 				74D856EF280AEF2800FEE1B4 /* HomepageViewController.swift */,
@@ -248,6 +250,7 @@
 /* Begin XCBuildConfiguration section */
 		74D856E62809C89900FEE1B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D856F1280AFB8000FEE1B4 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -309,6 +312,7 @@
 		};
 		74D856E72809C89900FEE1B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D856F1280AFB8000FEE1B4 /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

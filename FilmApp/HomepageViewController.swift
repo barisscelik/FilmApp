@@ -28,6 +28,9 @@ final class HomepageViewController: UIViewController {
             PKLoader.shared.stopAnimating()
             self?.imageView.removeFromSuperview()
         }
+        
+        // MARK: - API_KEY
+        let apiKey = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as? String
     }
 
 }
