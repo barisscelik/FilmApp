@@ -72,9 +72,14 @@ final class ViewController: UIViewController {
     }
     
     private func fireTimer() {
-        Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false) { timer in
+        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { [weak self] timer in
             timer.invalidate()
             // MARK: - Present here
+            DispatchQueue.main.async {
+                let vc = HomepageViewController()
+                vc.modalPresentationStyle = .fullScreen
+                self?.present(vc, animated: true, completion: nil)
+            }
         }
     }
 
