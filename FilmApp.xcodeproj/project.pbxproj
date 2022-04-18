@@ -90,12 +90,12 @@
 				74D856F2280B01D500FEE1B4 /* OMDBAPICaller.swift */,
 				74D856DB2809C89600FEE1B4 /* ViewController.swift */,
 				74D856ED2809EA0800FEE1B4 /* NetworkChecker.swift */,
+				74D856F4280DADE000FEE1B4 /* FilmModel.swift */,
 				74D856DD2809C89600FEE1B4 /* Main.storyboard */,
 				74D856E02809C89900FEE1B4 /* Assets.xcassets */,
 				74D856E22809C89900FEE1B4 /* LaunchScreen.storyboard */,
 				74D856E52809C89900FEE1B4 /* Info.plist */,
 				74D856EB2809CDD700FEE1B4 /* GoogleService-Info.plist */,
-				74D856F4280DADE000FEE1B4 /* FilmModel.swift */,
 			);
 			path = FilmApp;
 			sourceTree = "<group>";

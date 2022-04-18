@@ -22,7 +22,6 @@ final class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemYellow
         view.addSubview(label)
         fetchText()
         checkInternetConnection()
@@ -78,7 +77,7 @@ final class ViewController: UIViewController {
             DispatchQueue.main.async {
                 let vc = HomepageViewController()
                 vc.modalPresentationStyle = .fullScreen
-                self?.present(vc, animated: true, completion: nil)
+                self?.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
