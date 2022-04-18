@@ -5,7 +5,6 @@
 //  Created by barış çelik on 16.04.2022.
 //
 
-import Foundation
 import UIKit
 
 enum FilmError: Error {
