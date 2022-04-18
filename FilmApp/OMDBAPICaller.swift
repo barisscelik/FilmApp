@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum FilmError: Error {
     case notFound
@@ -54,5 +55,25 @@ final class OMDBAPICalller {
                 completion(.failure(FilmError.notFound))
             }
         }
+    }
+    
+    func getImage(urlString: String, completion: @escaping (UIImage?) -> Void) {
+        
+        guard let url = URL(string: urlString) else {
+            completion(nil)
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+            
+            guard let data = data, error == nil else {
+                completion(nil)
+                return
+            }
+            
+            completion(UIImage(data: data))
+        }
+        
+        task.resume()
     }
 }
