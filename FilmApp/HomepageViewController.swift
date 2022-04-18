@@ -21,16 +21,23 @@ final class HomepageViewController: UIViewController {
         view.backgroundColor = .systemCyan
         view.addSubview(imageView)
         imageView.center = view.center
+        title = "HomePage"
         
         PKLoader.shared.startAnimating(onView: imageView)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [weak self] in
+        OMDBAPICalller.shared.fetchFilms(key: "Batman") {[weak self] result in
             PKLoader.shared.stopAnimating()
             self?.imageView.removeFromSuperview()
+            
+            switch result {
+            case .success(let filmModel):
+                print("Model Size : \(filmModel.count)")
+                break
+            case .failure(let error):
+                print(error)
+                break
+            }
         }
-        
-        // MARK: - API_KEY
-        let apiKey = Bundle.main.object(forInfoDictionaryKey: "API_KEY") as? String
     }
 
 }

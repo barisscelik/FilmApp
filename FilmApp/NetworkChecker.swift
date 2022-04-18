@@ -18,7 +18,6 @@ final class NetworkChecker {
     
     private init() {
         monitor = NWPathMonitor()
-        
     }
     
     public func getConnetctionStatus(completion: @escaping (Bool) -> Void) {
