@@ -147,7 +147,8 @@ extension HomepageViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.textLabel?.text = cellModel.Title
+        cell.configure(image: cellModel.Poster, title: cellModel.Title,
+                       director: cellModel.Director, year: cellModel.Year)
         
         return cell
     }
@@ -158,7 +159,9 @@ extension HomepageViewController: UITableViewDelegate, UITableViewDataSource {
         // MARK: - Present datailview in here
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     
 }
